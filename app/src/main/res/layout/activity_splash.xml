@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clay_bg"
+    android:padding="@dimen/screen_margin">
+
+    <TextView
+        android:id="@+id/tvBismillah"
+        style="@style/Clay.Bismillah"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/bismillah_arabic"
+        android:textDirection="rtl"
+        app:layout_constraintBottom_toTopOf="@+id/tvBismillahTranslit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvBismillahTranslit"
+        style="@style/Clay.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/bismillah_transliteration"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/tvAppName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBismillah" />
+
+    <TextView
+        android:id="@+id/tvAppName"
+        style="@style/Clay.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/app_name"
+        app:layout_constraintBottom_toTopOf="@+id/tvAuthor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBismillahTranslit" />
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        style="@style/Clay.Body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/app_author"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAppName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

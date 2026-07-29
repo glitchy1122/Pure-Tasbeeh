@@ -1,0 +1,7 @@
+// Top-level build file for Pure Tasbeeh
+// Property of Adrees ul Hassan — Not to be shared without permission.
+
+plugins {
+    id 'com.android.application' version '8.7.3' apply false
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin' version '2.0.1' apply false
+}

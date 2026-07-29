@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/clay_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/clay_padding_large">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        style="@style/Clay.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/select_fiqh_title" />
+
+    <TextView
+        android:id="@+id/tvDialogMessage"
+        style="@style/Clay.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/select_fiqh_message" />
+
+    <TextView
+        android:id="@+id/btnFiqhJafriya"
+        style="@style/Clay.TileLabel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_clay_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/fiqh_jafriya" />
+
+    <TextView
+        android:id="@+id/btnFiqhHanfiya"
+        style="@style/Clay.TileLabel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_clay_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/fiqh_hanfiya" />
+
+    <TextView
+        android:id="@+id/btnFiqhBoth"
+        style="@style/Clay.TileLabel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_clay_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/fiqh_both" />
+</LinearLayout>

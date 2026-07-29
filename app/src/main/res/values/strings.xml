@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pure Tasbeeh</string>
+    <string name="app_author">Made by Adrees ul Hassan</string>
+    <string name="app_license_notice">Property of Adrees ul Hassan — Not to be shared without permission</string>
+    <string name="bismillah_arabic">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</string>
+    <string name="bismillah_transliteration">Bismillahir Rahmanir Raheem</string>
+
+    <string name="select_fiqh_title">Select Your Fiqh</string>
+    <string name="select_fiqh_message">Choose how duas and ahadith are shown. You can change this later.</string>
+    <string name="fiqh_jafriya">Fiqah-e-Jafriya</string>
+    <string name="fiqh_hanfiya">Fiqah-e-Hanfiya</string>
+    <string name="fiqh_both">Universal / Both</string>
+    <string name="fiqh_settings">Fiqh Settings</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="continue_label">Continue</string>
+
+    <string name="home_title">Pure Tasbeeh</string>
+    <string name="hadith_of_the_day">Hadith of the Day</string>
+    <string name="menu_quran">Holy Quran</string>
+    <string name="menu_duas">Duas &amp; Munajat</string>
+    <string name="menu_tasbeeh_zehra">Tasbeeh e Zehra (s.a)</string>
+    <string name="menu_custom_tasbeeh">Custom Tasbeeh</string>
+    <string name="menu_books">Islamic Books</string>
+    <string name="quran_coming_soon">Holy Quran — opening soon in a future update.</string>
+
+    <string name="prayer_fajr">Fajr</string>
+    <string name="prayer_sunrise">Sunrise</string>
+    <string name="prayer_dhuhr">Dhuhr</string>
+    <string name="prayer_asr">Asr</string>
+    <string name="prayer_maghrib">Maghrib</string>
+    <string name="prayer_isha">Isha</string>
+    <string name="current_prayer">Now</string>
+
+    <string name="duas_jafriya_header">Fiqah-e-Jafriya Duas &amp; Munajat</string>
+    <string name="duas_hanfiya_header">Fiqah-e-Hanfiya Duas &amp; Munajat</string>
+    <string name="cat_namaz">Namaz Related</string>
+    <string name="cat_special">Special Duas</string>
+    <string name="cat_months">Months Related</string>
+    <string name="cat_daily">Daily</string>
+
+    <string name="tasbeeh_zehra_title">Tasbeeh e Zehra (s.a)</string>
+    <string name="zikr_allahu_akbar">الله أكبر</string>
+    <string name="zikr_allahu_akbar_label">Allahu Akbar · 34</string>
+    <string name="zikr_alhamdulillah">الحمد لله</string>
+    <string name="zikr_alhamdulillah_label">Alhamdulillah · 33</string>
+    <string name="zikr_subhanallah">سبحان الله</string>
+    <string name="zikr_subhanallah_label">Subhanallah · 33</string>
+    <string name="tasbeeh_complete">Tasbeeh complete. May Allah accept it.</string>
+    <string name="reset">Reset</string>
+    <string name="tap_to_count">Tap to count</string>
+
+    <string name="custom_tasbeeh_title">Custom Tasbeeh</string>
+    <string name="how_are_you_feeling">How are you feeling?</string>
+    <string name="feeling_hint">e.g. grateful, anxious, seeking peace…</string>
+    <string name="get_zikr">Get Zikr</string>
+    <string name="default_zikr">سُبْحَانَ اللهِ</string>
+    <string name="count_label">Count</string>
+    <string name="gemini_loading">Finding a zikr for you…</string>
+    <string name="gemini_error">Could not reach Gemini. Check your key and connection.</string>
+    <string name="gemini_key_missing">Add GEMINI_API_KEY to local.properties and rebuild.</string>
+
+    <string name="books_title">Islamic Books</string>
+    <string name="download">Download</string>
+    <string name="downloading">Downloading…</string>
+    <string name="download_started">Download started</string>
+    <string name="by_author">by %1$s</string>
+
+    <string name="no_content">No content for this category yet.</string>
+</resources>
