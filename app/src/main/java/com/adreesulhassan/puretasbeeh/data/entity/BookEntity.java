@@ -6,7 +6,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 /**
- * Universal Islamic books (no sect tag).
+ * Islamic books — tagged by sect for Fiqh filtering.
  */
 @Entity(tableName = "books")
 public class BookEntity {
@@ -26,11 +26,17 @@ public class BookEntity {
     @ColumnInfo(name = "download_url")
     public String downloadUrl;
 
+    @NonNull
+    @ColumnInfo(name = "sect_tag")
+    public String sectTag;
+
     public BookEntity(@NonNull String bookName,
                       @NonNull String author,
-                      @NonNull String downloadUrl) {
+                      @NonNull String downloadUrl,
+                      @NonNull String sectTag) {
         this.bookName = bookName;
         this.author = author;
         this.downloadUrl = downloadUrl;
+        this.sectTag = sectTag;
     }
 }

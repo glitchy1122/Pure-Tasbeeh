@@ -19,6 +19,10 @@ public interface BookDao {
     @Query("SELECT * FROM books ORDER BY book_name ASC")
     LiveData<List<BookEntity>> observeAll();
 
+    @Query("SELECT * FROM books WHERE sect_tag = :sect OR sect_tag = 'BOTH' "
+            + "ORDER BY book_name ASC")
+    LiveData<List<BookEntity>> observeForSect(String sect);
+
     @Query("SELECT * FROM books ORDER BY book_name ASC")
     List<BookEntity> getAll();
 

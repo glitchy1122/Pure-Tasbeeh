@@ -16,7 +16,7 @@ import com.adreesulhassan.puretasbeeh.data.prefs.FiqhPreferences;
 import com.adreesulhassan.puretasbeeh.util.HapticHelper;
 
 /**
- * Dynamic Duas & Munajat library — 1 header (single fiqh) or 2 headers (Both).
+ * Divine Pearls–style Duas library sections + Sahifa (universal).
  */
 public class DuasLibraryActivity extends AppCompatActivity {
 
@@ -73,7 +73,6 @@ public class DuasLibraryActivity extends AppCompatActivity {
         } else {
             headerSingle.setVisibility(View.GONE);
             headerDualRow.setVisibility(View.VISIBLE);
-            // Categories hidden until a fiqh header is tapped
             if (activeSect == null) {
                 categoryContainer.setVisibility(View.GONE);
             }
@@ -90,10 +89,22 @@ public class DuasLibraryActivity extends AppCompatActivity {
                 openList(ContentCategory.NAMAZ, getString(R.string.cat_namaz), v));
         findViewById(R.id.catSpecial).setOnClickListener(v ->
                 openList(ContentCategory.SPECIAL, getString(R.string.cat_special), v));
-        findViewById(R.id.catMonths).setOnClickListener(v ->
-                openList(ContentCategory.MONTHS, getString(R.string.cat_months), v));
+        findViewById(R.id.catZiyaraat).setOnClickListener(v ->
+                openList(ContentCategory.ZIYARAAT, getString(R.string.cat_ziyaraat), v));
+        findViewById(R.id.catMunajat).setOnClickListener(v ->
+                openList(ContentCategory.MUNAJAAT, getString(R.string.cat_munajat), v));
+        findViewById(R.id.catAamal).setOnClickListener(v ->
+                openList(ContentCategory.AAMAL, getString(R.string.cat_aamal), v));
         findViewById(R.id.catDaily).setOnClickListener(v ->
                 openList(ContentCategory.DAILY, getString(R.string.cat_daily), v));
+        findViewById(R.id.catSahifa).setOnClickListener(v -> {
+            HapticHelper.contextClick(v);
+            Intent i = new Intent(this, DuaListActivity.class);
+            i.putExtra(EXTRA_SECT, SectTag.BOTH);
+            i.putExtra(EXTRA_CATEGORY, ContentCategory.SAHIFA);
+            i.putExtra(EXTRA_TITLE, getString(R.string.cat_sahifa));
+            startActivity(i);
+        });
     }
 
     private void openList(String category, String title, View v) {

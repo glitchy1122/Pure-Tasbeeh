@@ -20,7 +20,7 @@ import java.util.concurrent.Executors;
 
 @Database(
         entities = {ContentEntity.class, BookEntity.class, HadithEntity.class},
-        version = 1,
+        version = 6,
         exportSchema = false
 )
 public abstract class AppDatabase extends RoomDatabase {
@@ -48,17 +48,18 @@ public abstract class AppDatabase extends RoomDatabase {
                                 @Override
                                 public void onCreate(@NonNull SupportSQLiteDatabase db) {
                                     super.onCreate(db);
+                                    Context app = context.getApplicationContext();
                                     IO.execute(() -> {
                                         if (INSTANCE != null) {
-                                            DatabaseSeeder.seed(INSTANCE);
+                                            DatabaseSeeder.seed(app, INSTANCE);
                                         }
                                     });
                                 }
                             })
                             .fallbackToDestructiveMigration()
                             .build();
-                    // Ensure seed also runs for fresh installs after first open
-                    IO.execute(() -> DatabaseSeeder.seed(INSTANCE));
+                    Context appCtx = context.getApplicationContext();
+                    IO.execute(() -> DatabaseSeeder.seed(appCtx, INSTANCE));
                 }
             }
         }

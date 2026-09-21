@@ -16,15 +16,18 @@ public interface ContentDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(List<ContentEntity> items);
 
+    @Query("DELETE FROM content")
+    void deleteAll();
+
     @Query("SELECT * FROM content WHERE id = :id LIMIT 1")
     ContentEntity getById(long id);
 
     @Query("SELECT * FROM content WHERE category = :category AND "
-            + "(sect_tag = :sect OR sect_tag = 'BOTH') ORDER BY title ASC")
+            + "(sect_tag = :sect OR sect_tag = 'BOTH') ORDER BY id ASC")
     LiveData<List<ContentEntity>> observeByCategoryAndSect(String category, String sect);
 
     @Query("SELECT * FROM content WHERE category = :category AND "
-            + "(sect_tag = :sect OR sect_tag = 'BOTH') ORDER BY title ASC")
+            + "(sect_tag = :sect OR sect_tag = 'BOTH') ORDER BY id ASC")
     List<ContentEntity> getByCategoryAndSect(String category, String sect);
 
     @Query("SELECT COUNT(*) FROM content")

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تسابيح نقية</string>
+    <string name="app_author">من إعداد أدريس الحسن</string>
+    <string name="app_license_notice">مرخّص بموجب رخصة MIT</string>
+    <string name="bismillah_transliteration">بسم الله الرحمن الرحيم</string>
+
+    <string name="select_fiqh_title">اختر مذهبك</string>
+    <string name="select_fiqh_message">اختر كيفية عرض الأدعية والأحاديث. يمكنك التغيير لاحقًا.</string>
+    <string name="fiqh_jafriya">الفقه الجعفري</string>
+    <string name="fiqh_hanfiya">الفقه الحنفي</string>
+    <string name="fiqh_both">شامل / كلاهما</string>
+    <string name="fiqh_settings">إعدادات المذهب</string>
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="continue_label">متابعة</string>
+
+    <string name="home_title">تسابيح نقية</string>
+    <string name="hadith_of_the_day">حديث اليوم</string>
+    <string name="menu_quran">القرآن الكريم</string>
+    <string name="menu_duas">أدعية ومناجاة</string>
+    <string name="menu_tasbeeh_zehra">تسبيح الزهراء (ع)</string>
+    <string name="menu_custom_tasbeeh">تسبيح مخصص</string>
+    <string name="menu_ahadith">أحاديث</string>
+    <string name="menu_books">كتب إسلامية</string>
+    <string name="ahadith_title">أحاديث</string>
+    <string name="quran_title">القرآن الكريم</string>
+    <string name="quran_loading">جاري تحميل السور…</string>
+    <string name="quran_empty">لم تُعثر على سور.</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="location_settings">إعدادات الموقع</string>
+    <string name="app_language">لغة التطبيق</string>
+    <string name="select_language_title">اختر لغة التطبيق</string>
+    <string name="language_changed">تم تحديث اللغة</string>
+    <string name="search_city_hint">ابحث عن مدينة…</string>
+    <string name="selected_city">المدينة المختارة</string>
+    <string name="namaz_offset_title">تعديل أوقات الصلاة</string>
+    <string name="add_city">إضافة مدينة</string>
+    <string name="city_search_hint_action">اكتب اسم المدينة ثم اضغط إضافة.</string>
+    <string name="city_not_found">لم تُعثر على مدينة.</string>
+    <string name="tap_for_new_hadith">اضغط لحديث آخر</string>
+    <string name="city_selected">تم ضبط المدينة إلى %1$s</string>
+    <string name="sky_panel_label">السماء · %1$s</string>
+    <string name="sun_position">الشمس</string>
+    <string name="moon_position">القمر</string>
+    <string name="sky_below_horizon">تحت الأفق</string>
+    <string name="sky_day_estimate">تقدير نهاري</string>
+    <string name="sky_rising">شروق</string>
+    <string name="sky_setting">غروب</string>
+    <string name="sky_overhead_pct">في السماء ~%1$d%%</string>
+    <string name="hijri_month_1">محرم</string>
+    <string name="hijri_month_2">صفر</string>
+    <string name="hijri_month_3">ربيع الأول</string>
+    <string name="hijri_month_4">ربيع الثاني</string>
+    <string name="hijri_month_5">جمادى الأولى</string>
+    <string name="hijri_month_6">جمادى الآخرة</string>
+    <string name="hijri_month_7">رجب</string>
+    <string name="hijri_month_8">شعبان</string>
+    <string name="hijri_month_9">رمضان</string>
+    <string name="hijri_month_10">شوال</string>
+    <string name="hijri_month_11">ذو القعدة</string>
+    <string name="hijri_month_12">ذو الحجة</string>
+    <string name="date_hijri_gregorian">%1$d %2$s %3$d هـ  ·  %4$s</string>
+    <string name="namaz_method_title">أي طريقة لحساب الصلاة للوحة الرئيسية؟</string>
+    <string name="namaz_method_shia">شيعي (جعفري)</string>
+    <string name="namaz_method_sunni">سني (حنفي)</string>
+    <string name="open_fiqh_settings">فتح إعدادات المذهب</string>
+
+    <string name="prayer_fajr">الفجر</string>
+    <string name="prayer_sunrise">الشروق</string>
+    <string name="prayer_dhuhr">الظهر</string>
+    <string name="prayer_asr">العصر</string>
+    <string name="prayer_maghrib">المغرب</string>
+    <string name="prayer_isha">العشاء</string>
+    <string name="current_prayer">الآن</string>
+
+    <string name="duas_jafriya_header">أدعية ومناجاة — جعفري</string>
+    <string name="duas_hanfiya_header">أدعية ومناجاة — حنفي</string>
+    <string name="cat_namaz">الصلاة والتعقيبات</string>
+    <string name="cat_special">أدعية خاصة</string>
+    <string name="cat_ziyaraat">زيارات</string>
+    <string name="cat_munajat">مناجاة</string>
+    <string name="cat_aamal">أعمال (شهور وأيام)</string>
+    <string name="cat_months">أعمال (شهور وأيام)</string>
+    <string name="cat_daily">أذكار الصباح والمساء</string>
+    <string name="cat_sahifa">الصحيفة السجادية</string>
+    <string name="menu_faal">فال (٣ آيات)</string>
+    <string name="faal_title">فال</string>
+    <string name="faal_hint">ثلاث آيات عشوائية من القرآن الكريم</string>
+    <string name="faal_refresh">فال جديد</string>
+
+    <string name="tasbeeh_zehra_title">تسبيح الزهراء (ع)</string>
+    <string name="zikr_allahu_akbar_label">الله أكبر · ٣٤</string>
+    <string name="zikr_alhamdulillah_label">الحمد لله · ٣٣</string>
+    <string name="zikr_subhanallah_label">سبحان الله · ٣٣</string>
+    <string name="tasbeeh_complete">اكتمل التسبيح. تقبّل الله.</string>
+    <string name="tasbeeh_complete_short">اكتمل</string>
+    <string name="may_allah_accept">تقبّل الله</string>
+    <string name="reset">إعادة</string>
+    <string name="tap_to_count">اضغط للعدّ</string>
+
+    <string name="custom_tasbeeh_title">تسبيح مخصص</string>
+    <string name="target_count_label">العدد المستهدف</string>
+    <string name="target_reached">بلغت الهدف · %1$d</string>
+    <string name="how_are_you_feeling">كيف تشعر؟</string>
+    <string name="feeling_hint">مثال: شاكر، قلق، أبحث عن سكينة…</string>
+    <string name="get_zikr">احصل على ذكر</string>
+    <string name="count_label">العدد</string>
+    <string name="feeling_suggestion_ready">اقتراح يناسب شعورك</string>
+
+    <string name="books_title">كتب إسلامية</string>
+    <string name="books_coming_soon">سيُضاف قريبًا.\n\nأدعية وأحاديث من مفاتيح الجنان وحصن المسلم متوفرة الآن دون اتصال في الأدعية والأحاديث.</string>
+    <string name="download">تنزيل</string>
+    <string name="downloading">جارٍ التنزيل…</string>
+    <string name="download_started">بدأ التنزيل</string>
+    <string name="download_failed">فشل التنزيل</string>
+    <string name="by_author">بقلم %1$s</string>
+
+    <string name="use_device_location">استخدم موقع الجهاز</string>
+    <string name="no_content">لا محتوى لهذه الفئة بعد.</string>
+</resources>

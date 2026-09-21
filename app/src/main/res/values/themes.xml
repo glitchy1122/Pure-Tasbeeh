@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.PureTasbeeh" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/clay_surface</item>
-        <item name="colorPrimaryVariant">@color/clay_shadow_dark</item>
-        <item name="colorOnPrimary">@color/text_primary</item>
+        <item name="colorPrimary">@color/accent_terracotta</item>
+        <item name="colorPrimaryVariant">@color/clay_shadow_deeper</item>
+        <item name="colorOnPrimary">@color/white_soft</item>
         <item name="colorSecondary">@color/accent_terracotta</item>
         <item name="colorOnSecondary">@color/white_soft</item>
         <item name="android:colorBackground">@color/clay_bg</item>
         <item name="android:windowBackground">@color/clay_bg</item>
-        <item name="android:statusBarColor">@color/clay_shadow_dark</item>
+        <item name="android:statusBarColor">@color/clay_bg</item>
         <item name="android:navigationBarColor">@color/clay_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:textColorPrimary">@color/text_primary</item>
         <item name="android:textColorSecondary">@color/text_secondary</item>
         <item name="android:forceDarkAllowed">false</item>
@@ -19,16 +20,24 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
-    <style name="Clay.Title" parent="TextAppearance.MaterialComponents.Headline6">
+    <style name="Clay.Title" parent="TextAppearance.MaterialComponents.Headline5">
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:textSize">@dimen/text_title</item>
-        <item name="android:fontFamily">serif</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">-0.01</item>
     </style>
 
     <style name="Clay.Body" parent="TextAppearance.MaterialComponents.Body1">
         <item name="android:textColor">@color/text_secondary</item>
         <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+
+    <style name="Clay.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/text_muted</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <style name="Clay.Arabic" parent="TextAppearance.MaterialComponents.Headline5">
@@ -37,6 +46,7 @@
         <item name="android:fontFamily">serif</item>
         <item name="android:textAlignment">viewStart</item>
         <item name="android:textDirection">rtl</item>
+        <item name="android:lineSpacingMultiplier">1.45</item>
     </style>
 
     <style name="Clay.Bismillah" parent="Clay.Arabic">
@@ -54,7 +64,23 @@
     <style name="Clay.TileLabel" parent="Clay.Body">
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">13sp</item>
         <item name="android:gravity">center</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="Clay.ListRow" parent="Clay.Body">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Clay.HadithQuote" parent="Clay.Body">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingMultiplier">1.35</item>
+        <item name="android:letterSpacing">0.01</item>
     </style>
 </resources>

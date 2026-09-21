@@ -1,7 +1,5 @@
 # Pure Tasbeeh
 
-**Property of Adrees ul Hassan — Not to be shared without permission.**
-
 Minimalist, privacy-focused, offline-first Islamic app (Java / XML).
 
 ## Features
@@ -11,22 +9,18 @@ Minimalist, privacy-focused, offline-first Islamic app (Java / XML).
 - Room DB: Duas/Munajat, Ahadith, Books (pre-seeded)
 - Offline prayer times (adhan-java)
 - Tasbeeh e Zehra (s.a) guided counter
-- Custom Tasbeeh + Gemini zikr suggestions
-- Islamic books via DownloadManager
+- Custom Tasbeeh with offline feeling → zikr / ayah / short dua
+- Quran, Faal, and Islamic books catalog
 
 ## Setup
 
 1. Open the project in Android Studio.
-2. Put your Gemini key in `local.properties` (gitignored):
+2. Sync Gradle and run the `app` configuration.
 
-```properties
-GEMINI_API_KEY=your_key_here
-```
+Optional: create a local `local.properties` for the Android SDK path (this file is gitignored and must never contain committed secrets).
 
-3. Sync Gradle and run the `app` configuration.
-
-Secrets are injected via Google’s Secrets Gradle Plugin into `BuildConfig.GEMINI_API_KEY`.
+Debug APK is written to `PureTasbeeh-debug.apk` in the project root after a local build.
 
 ## License
 
-Proprietary. Copyright © 2026 Adrees ul Hassan. All rights reserved.
+MIT License. See [LICENSE](LICENSE).

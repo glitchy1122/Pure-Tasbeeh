@@ -1,6 +1,7 @@
 *.iml
 .gradle/
 /local.properties
+local.properties
 /.idea/
 .DS_Store
 /build/
@@ -20,3 +21,9 @@ device_screenshot.png
 device_home.png
 *.png
 !app/src/**/*.png
+.env
+.env.*
+*.pem
+secrets.properties
+**/GEMINI_API_KEY*
+%s

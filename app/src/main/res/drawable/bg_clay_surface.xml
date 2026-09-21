@@ -1,59 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Claymorphism surface: dual inner + soft outer shadow simulation -->
+<!-- Soft elevated surface — iOS-style card on warm clay -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Soft outer drop shadow -->
     <item
-        android:left="2dp"
-        android:top="3dp"
+        android:left="0dp"
+        android:top="1dp"
         android:right="0dp"
         android:bottom="0dp">
         <shape android:shape="rectangle">
-            <solid android:color="#552C1810" />
+            <solid android:color="#14000000" />
             <corners android:radius="@dimen/clay_radius" />
         </shape>
     </item>
-    <!-- Base baked-earth surface -->
     <item
-        android:left="0dp"
-        android:top="0dp"
-        android:right="2dp"
-        android:bottom="3dp">
+        android:bottom="1.5dp">
         <shape android:shape="rectangle">
             <solid android:color="@color/clay_surface" />
             <corners android:radius="@dimen/clay_radius" />
             <stroke
-                android:width="1.5dp"
-                android:color="@color/clay_highlight" />
-        </shape>
-    </item>
-    <!-- Light top-left inner highlight -->
-    <item
-        android:left="3dp"
-        android:top="3dp"
-        android:right="10dp"
-        android:bottom="18dp">
-        <shape android:shape="rectangle">
-            <gradient
-                android:angle="315"
-                android:startColor="#66E8D5C4"
-                android:endColor="@color/transparent"
-                android:type="linear" />
-            <corners android:radius="20dp" />
-        </shape>
-    </item>
-    <!-- Dark bottom-right inner shadow -->
-    <item
-        android:left="10dp"
-        android:top="18dp"
-        android:right="3dp"
-        android:bottom="3dp">
-        <shape android:shape="rectangle">
-            <gradient
-                android:angle="135"
-                android:startColor="#448B6B52"
-                android:endColor="@color/transparent"
-                android:type="linear" />
-            <corners android:radius="20dp" />
+                android:width="0.5dp"
+                android:color="@color/tile_stroke" />
         </shape>
     </item>
 </layer-list>

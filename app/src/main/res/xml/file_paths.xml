@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <paths>
     <external-path name="downloads" path="Download/" />
+    <external-files-path name="app_books" path="Documents/books/" />
+    <external-files-path name="app_books_temp" path="books_temp/" />
+    <cache-path name="cache_books" path="books_temp/" />
     <files-path name="books" path="books/" />
 </paths>

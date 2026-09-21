@@ -79,7 +79,12 @@ public class DuaListActivity extends AppCompatActivity {
         public void onBindViewHolder(@NonNull VH holder, int position) {
             ContentEntity item = items.get(position);
             holder.title.setText(item.title);
-            holder.arabic.setText(item.arabicText);
+            String ar = item.arabicText;
+            if (ar != null && ar.length() > 160) {
+                ar = ar.substring(0, 160).trim() + "…";
+            }
+            holder.arabic.setText(ar);
+            holder.arabic.setTextSize(16f);
             holder.itemView.setOnClickListener(v -> {
                 HapticHelper.contextClick(v);
                 Intent i = new Intent(DuaListActivity.this, DuaDetailActivity.class);

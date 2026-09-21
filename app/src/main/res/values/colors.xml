@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Khak-e-Shifa / Claymorphism palette -->
-    <color name="clay_bg">#D0B49F</color>
-    <color name="clay_surface">#C49A7C</color>
-    <color name="clay_surface_pressed">#B88968</color>
-    <color name="clay_highlight">#E8D5C4</color>
-    <color name="clay_shadow_dark">#8B6B52</color>
-    <color name="clay_shadow_deeper">#6B4F3A</color>
-    <color name="text_primary">#2C1810</color>
-    <color name="text_secondary">#5C4033</color>
-    <color name="text_muted">#7A5C4A</color>
-    <color name="accent_terracotta">#A65D3F</color>
-    <color name="accent_milestone">#8B4513</color>
-    <color name="prayer_highlight">#9C6B4A</color>
-    <color name="prayer_idle">#C49A7C</color>
-    <color name="white_soft">#F5EDE6</color>
+    <!-- Refined Khak-e-Shifa · iOS-level warm professional palette -->
+    <color name="clay_bg">#F3EBE3</color>
+    <color name="clay_surface">#FFFFFF</color>
+    <color name="clay_surface_pressed">#EDE4DA</color>
+    <color name="clay_highlight">#FBF7F3</color>
+    <color name="clay_shadow_dark">#C4A990</color>
+    <color name="clay_shadow_deeper">#8B7355</color>
+    <color name="text_primary">#1C1410</color>
+    <color name="text_secondary">#6B5E55</color>
+    <color name="text_muted">#9A8B7E</color>
+    <color name="accent_terracotta">#A67C52</color>
+    <color name="accent_milestone">#8B6240</color>
+    <color name="prayer_highlight">#E8D5C4</color>
+    <color name="prayer_idle">#FFFFFF</color>
+    <color name="white_soft">#FFFBFA</color>
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>
-    <color name="divider_clay">#B08A6E</color>
+    <color name="divider_clay">#E5D9CE</color>
+    <color name="tile_fill">#F7F1EA</color>
+    <color name="tile_stroke">#E0D2C4</color>
+    <color name="ios_grouped_bg">#F2EBE4</color>
 </resources>

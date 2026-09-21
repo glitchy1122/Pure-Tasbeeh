@@ -5,6 +5,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Legacy only (API ≤28). Modern downloads use app-private / SAF one-time access. -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28"
         tools:ignore="ScopedStorage" />
@@ -62,7 +66,32 @@
             android:exported="false" />
 
         <activity
+            android:name=".ui.ahadith.AhadithActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.faal.FaalActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".ui.settings.FiqhSettingsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.settings.LocationSettingsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.quran.QuranActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.quran.SurahDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ui.settings.NamazOffsetActivity"
             android:exported="false" />
 
         <provider

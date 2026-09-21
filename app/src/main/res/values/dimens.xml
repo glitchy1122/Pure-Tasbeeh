@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="clay_radius">24dp</dimen>
-    <dimen name="clay_radius_small">16dp</dimen>
-    <dimen name="clay_radius_large">32dp</dimen>
-    <dimen name="clay_padding">16dp</dimen>
-    <dimen name="clay_padding_large">24dp</dimen>
-    <dimen name="screen_margin">20dp</dimen>
-    <dimen name="tile_min_height">110dp</dimen>
-    <dimen name="tap_button_size">220dp</dimen>
-    <dimen name="header_box_height">88dp</dimen>
-    <dimen name="text_title">22sp</dimen>
-    <dimen name="text_body">16sp</dimen>
-    <dimen name="text_arabic">28sp</dimen>
-    <dimen name="text_bismillah">36sp</dimen>
-    <dimen name="text_counter">56sp</dimen>
+    <dimen name="clay_radius">18dp</dimen>
+    <dimen name="clay_radius_small">12dp</dimen>
+    <dimen name="clay_radius_large">24dp</dimen>
+    <dimen name="clay_padding">10dp</dimen>
+    <dimen name="clay_padding_large">14dp</dimen>
+    <dimen name="screen_margin">16dp</dimen>
+    <dimen name="tile_min_height">72dp</dimen>
+    <dimen name="tile_grid_gap">10dp</dimen>
+    <dimen name="settings_icon_size">36dp</dimen>
+    <dimen name="sky_panel_height">64dp</dimen>
+    <dimen name="tap_button_size">160dp</dimen>
+    <dimen name="header_box_height">48dp</dimen>
+    <dimen name="category_row_height">48dp</dimen>
+    <dimen name="text_title">18sp</dimen>
+    <dimen name="text_body">13sp</dimen>
+    <dimen name="text_arabic">20sp</dimen>
+    <dimen name="text_bismillah">26sp</dimen>
+    <dimen name="text_counter">40sp</dimen>
 </resources>

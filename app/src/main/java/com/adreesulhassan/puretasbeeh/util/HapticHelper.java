@@ -12,29 +12,20 @@ public final class HapticHelper {
     }
 
     public static void tap(View view) {
-        if (view == null) {
-            return;
-        }
-        view.performHapticFeedback(
-                HapticFeedbackConstants.KEYBOARD_PRESS,
-                HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+        perform(view, HapticFeedbackConstants.KEYBOARD_PRESS);
     }
 
     public static void contextClick(View view) {
-        if (view == null) {
-            return;
-        }
-        view.performHapticFeedback(
-                HapticFeedbackConstants.CONTEXT_CLICK,
-                HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
+        perform(view, HapticFeedbackConstants.CONTEXT_CLICK);
     }
 
     public static void milestone(View view) {
-        if (view == null) {
-            return;
-        }
+        perform(view, HapticFeedbackConstants.CONFIRM);
+    }
+
+    private static void perform(View view, int feedbackConstant) {
         view.performHapticFeedback(
-                HapticFeedbackConstants.CONFIRM,
+                feedbackConstant,
                 HapticFeedbackConstants.FLAG_IGNORE_GLOBAL_SETTING);
     }
 }

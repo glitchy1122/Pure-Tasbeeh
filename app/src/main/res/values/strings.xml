@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Pure Tasbeeh</string>
     <string name="app_author">Made by Adrees ul Hassan</string>
-    <string name="app_license_notice">Property of Adrees ul Hassan — Not to be shared without permission</string>
+    <string name="app_license_notice">Released under the MIT License</string>
     <string name="bismillah_arabic">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</string>
     <string name="bismillah_transliteration">Bismillahir Rahmanir Raheem</string>
 
@@ -22,8 +22,54 @@
     <string name="menu_duas">Duas &amp; Munajat</string>
     <string name="menu_tasbeeh_zehra">Tasbeeh e Zehra (s.a)</string>
     <string name="menu_custom_tasbeeh">Custom Tasbeeh</string>
+    <string name="menu_ahadith">Ahadith</string>
     <string name="menu_books">Islamic Books</string>
-    <string name="quran_coming_soon">Holy Quran — opening soon in a future update.</string>
+    <string name="ahadith_title">Ahadith</string>
+    <string name="quran_title">Holy Quran</string>
+    <string name="quran_loading">Loading Surahs…</string>
+    <string name="quran_empty">No Surahs found. Database may still be copying.</string>
+    <string name="settings_title">Settings</string>
+    <string name="location_settings">Location Settings</string>
+    <string name="app_language">App Language</string>
+    <string name="select_language_title">Choose App Language</string>
+    <string name="language_changed">Language updated</string>
+    <string name="search_city_hint">Search city…</string>
+    <string name="selected_city">Selected city</string>
+    <string name="offset_time">Offset Time (minutes)</string>
+    <string name="offset_hint">Adjust prayer times by +/- minutes</string>
+    <string name="namaz_offset_title">Namaz Offset</string>
+    <string name="namaz_offset_hint">Set a separate minute offset for each prayer (−30 to +30).</string>
+    <string name="reset_offsets">Reset all offsets</string>
+    <string name="add_city">Add city</string>
+    <string name="city_search_hint_action">Type a city name, then tap Add city to show matches.</string>
+    <string name="city_not_found">No matching city found.</string>
+    <string name="tap_for_new_hadith">Tap for another</string>
+    <string name="city_selected">City set to %1$s</string>
+    <string name="sky_panel_label">Sky · %1$s</string>
+    <string name="sun_position">Sun</string>
+    <string name="moon_position">Moon</string>
+    <string name="sky_below_horizon">below horizon</string>
+    <string name="sky_day_estimate">day estimate</string>
+    <string name="sky_rising">rising</string>
+    <string name="sky_setting">setting</string>
+    <string name="sky_overhead_pct">overhead ~%1$d%%</string>
+    <string name="hijri_month_1">Muharram</string>
+    <string name="hijri_month_2">Safar</string>
+    <string name="hijri_month_3">Rabiʿ I</string>
+    <string name="hijri_month_4">Rabiʿ II</string>
+    <string name="hijri_month_5">Jumada I</string>
+    <string name="hijri_month_6">Jumada II</string>
+    <string name="hijri_month_7">Rajab</string>
+    <string name="hijri_month_8">Shaʿban</string>
+    <string name="hijri_month_9">Ramadan</string>
+    <string name="hijri_month_10">Shawwal</string>
+    <string name="hijri_month_11">Dhul Qaʿdah</string>
+    <string name="hijri_month_12">Dhul Hijjah</string>
+    <string name="date_hijri_gregorian">%1$d %2$s %3$d AH  ·  %4$s</string>
+    <string name="namaz_method_title">Which Namaz calculation method do you prefer for the dashboard?</string>
+    <string name="namaz_method_shia">Shia (Jafari)</string>
+    <string name="namaz_method_sunni">Sunni (Hanafi)</string>
+    <string name="open_fiqh_settings">Open Fiqh Settings</string>
 
     <string name="prayer_fajr">Fajr</string>
     <string name="prayer_sunrise">Sunrise</string>
@@ -35,10 +81,18 @@
 
     <string name="duas_jafriya_header">Fiqah-e-Jafriya Duas &amp; Munajat</string>
     <string name="duas_hanfiya_header">Fiqah-e-Hanfiya Duas &amp; Munajat</string>
-    <string name="cat_namaz">Namaz Related</string>
-    <string name="cat_special">Special Duas</string>
-    <string name="cat_months">Months Related</string>
-    <string name="cat_daily">Daily</string>
+    <string name="cat_namaz">Namaz &amp; Ta\'qeebat</string>
+    <string name="cat_special">Special Duas &amp; Supplications</string>
+    <string name="cat_ziyaraat">Ziyaraat</string>
+    <string name="cat_munajat">Munajaat</string>
+    <string name="cat_aamal">Aamal (Months &amp; Days)</string>
+    <string name="cat_months">Aamal (Months &amp; Days)</string>
+    <string name="cat_daily">Morning &amp; Evening Adhkar</string>
+    <string name="cat_sahifa">Sahifa e Sajadia</string>
+    <string name="menu_faal">Fa\'al (3 Verses)</string>
+    <string name="faal_title">Fa\'al</string>
+    <string name="faal_hint">Three random verses from the Holy Quran</string>
+    <string name="faal_refresh">New Fa\'al</string>
 
     <string name="tasbeeh_zehra_title">Tasbeeh e Zehra (s.a)</string>
     <string name="zikr_allahu_akbar">الله أكبر</string>
@@ -48,24 +102,53 @@
     <string name="zikr_subhanallah">سبحان الله</string>
     <string name="zikr_subhanallah_label">Subhanallah · 33</string>
     <string name="tasbeeh_complete">Tasbeeh complete. May Allah accept it.</string>
+    <string name="tasbeeh_complete_short">Complete</string>
+    <string name="may_allah_accept">May Allah Accept it</string>
     <string name="reset">Reset</string>
     <string name="tap_to_count">Tap to count</string>
 
     <string name="custom_tasbeeh_title">Custom Tasbeeh</string>
+    <string name="target_count_label">Target count</string>
+    <string name="target_reached">Target reached · %1$d</string>
     <string name="how_are_you_feeling">How are you feeling?</string>
     <string name="feeling_hint">e.g. grateful, anxious, seeking peace…</string>
     <string name="get_zikr">Get Zikr</string>
     <string name="default_zikr">سُبْحَانَ اللهِ</string>
     <string name="count_label">Count</string>
-    <string name="gemini_loading">Finding a zikr for you…</string>
-    <string name="gemini_error">Could not reach Gemini. Check your key and connection.</string>
-    <string name="gemini_key_missing">Add GEMINI_API_KEY to local.properties and rebuild.</string>
+    <string name="feeling_suggestion_ready">Suggested for your feeling</string>
 
     <string name="books_title">Islamic Books</string>
+    <string name="books_coming_soon">Soon will be added.\n\nDuas and ahadith from Mafatih al-Jinan and Hisnul Muslim are already available offline in Duas &amp; Ahadith.</string>
     <string name="download">Download</string>
     <string name="downloading">Downloading…</string>
     <string name="download_started">Download started</string>
+    <string name="download_failed">Download failed</string>
+    <string name="download_no_internet">Book downloads need internet. Without a connection this feature will not work properly.</string>
+    <string name="download_storage_choices">Choose where to save. App folder and temp need no storage permission. One-time save asks once via the system file picker.</string>
+    <string name="download_to_app_folder">App folder (private)</string>
+    <string name="download_to_temp">Temp / cache folder</string>
+    <string name="download_one_time_folder">One-time save (picker)</string>
+    <string name="download_temp_folder_note">Saved to the app temp folder (may be cleared by the system).</string>
+    <string name="storage_access_denied">Storage access was not granted. Download cancelled — that feature was not used.</string>
     <string name="by_author">by %1$s</string>
+
+    <string name="use_device_location">Use device location</string>
+    <string name="device_location_label">My location</string>
+    <string name="location_unavailable">Could not read device location. Pick a city manually instead.</string>
+
+    <string name="perm_onboarding_title">App permissions</string>
+    <string name="perm_onboarding_message">Pure Tasbeeh may ask for:\n\n• Notifications — download progress only\n• Location — optional GPS city (manual city always works)\n\nStorage uses the app folder, temp cache, or a one-time system picker — no broad storage access.\n\nIf you refuse a permission, that feature is not used.</string>
+    <string name="skip_permissions">Skip</string>
+    <string name="perm_skipped_message">Optional permissions were skipped. GPS city and download notifications stay off until you allow them later.</string>
+    <string name="perm_feature_off_title">Feature unavailable</string>
+    <string name="perm_critical_title">Required for this feature</string>
+    <string name="open_app_settings">Open settings</string>
+    <string name="perm_notif_title">Notifications</string>
+    <string name="perm_notif_rationale_download">Allow notifications to see book download progress. If you refuse, downloads still work without progress alerts.</string>
+    <string name="perm_notif_disabled">Notifications denied — download alerts will not be shown.</string>
+    <string name="perm_location_title">Location</string>
+    <string name="perm_location_rationale">Allow location to set prayer times from your GPS. If you refuse, only the manual city list is used.</string>
+    <string name="perm_location_disabled">Location denied — GPS city is disabled. Use the searchable city list instead.</string>
 
     <string name="no_content">No content for this category yet.</string>
 </resources>

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.adreesulhassan.puretasbeeh.R;
 import com.adreesulhassan.puretasbeeh.data.prefs.FiqhPreferences;
+import com.adreesulhassan.puretasbeeh.data.prefs.LocationPreferences;
 import com.adreesulhassan.puretasbeeh.util.HapticHelper;
 
 public class FiqhSettingsActivity extends AppCompatActivity {
@@ -58,7 +59,11 @@ public class FiqhSettingsActivity extends AppCompatActivity {
             } else {
                 value = FiqhPreferences.FIQH_BOTH;
             }
+            String previous = prefs.getFiqhOrDefault();
             prefs.setFiqh(value);
+            if (FiqhPreferences.FIQH_BOTH.equals(value) && !FiqhPreferences.FIQH_BOTH.equals(previous)) {
+                new LocationPreferences(this).clearNamazMethod();
+            }
             Toast.makeText(this, R.string.save, Toast.LENGTH_SHORT).show();
             finish();
         });

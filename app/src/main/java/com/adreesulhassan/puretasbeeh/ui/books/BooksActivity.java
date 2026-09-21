@@ -1,18 +1,14 @@
 package com.adreesulhassan.puretasbeeh.ui.books;
 
-import android.app.DownloadManager;
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,13 +16,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.adreesulhassan.puretasbeeh.R;
 import com.adreesulhassan.puretasbeeh.data.db.AppDatabase;
 import com.adreesulhassan.puretasbeeh.data.entity.BookEntity;
+import com.adreesulhassan.puretasbeeh.data.entity.SectTag;
+import com.adreesulhassan.puretasbeeh.data.prefs.FiqhPreferences;
 import com.adreesulhassan.puretasbeeh.util.HapticHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Universal Islamic books — DownloadManager via Room download_url.
+ * Book catalog (titles). Full PDF downloads coming later — content from
+ * Mafatih / Hisnul lives in Duas & Ahadith offline.
  */
 public class BooksActivity extends AppCompatActivity {
 
@@ -43,40 +42,29 @@ public class BooksActivity extends AppCompatActivity {
         adapter = new BookAdapter();
         recycler.setAdapter(adapter);
 
-        AppDatabase.getInstance(this).bookDao().observeAll().observe(this, list -> {
-            books.clear();
-            if (list != null) {
-                books.addAll(list);
-            }
-            adapter.notifyDataSetChanged();
-        });
-    }
-
-    private void startDownload(@NonNull BookEntity book) {
-        try {
-            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(book.downloadUrl));
-            request.setTitle(book.bookName);
-            request.setDescription(getString(R.string.downloading));
-            request.setNotificationVisibility(
-                    DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-            request.setDestinationInExternalPublicDir(
-                    Environment.DIRECTORY_DOWNLOADS,
-                    sanitizeFileName(book.bookName) + ".pdf");
-            request.setAllowedOverMetered(true);
-            request.setAllowedOverRoaming(true);
-
-            DownloadManager dm = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-            if (dm != null) {
-                dm.enqueue(request);
-                Toast.makeText(this, R.string.download_started, Toast.LENGTH_SHORT).show();
-            }
-        } catch (Exception e) {
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+        String sect = new FiqhPreferences(this).toSectTag();
+        if (SectTag.BOTH.equals(sect)) {
+            AppDatabase.getInstance(this).bookDao().observeAll().observe(this, this::bindBooks);
+        } else {
+            AppDatabase.getInstance(this).bookDao().observeForSect(sect)
+                    .observe(this, this::bindBooks);
         }
     }
 
-    private static String sanitizeFileName(String name) {
-        return name.replaceAll("[^a-zA-Z0-9._\\- ]", "_").trim();
+    private void bindBooks(@Nullable List<BookEntity> list) {
+        books.clear();
+        if (list != null) {
+            books.addAll(list);
+        }
+        adapter.notifyDataSetChanged();
+    }
+
+    private void showComingSoon(@NonNull BookEntity book) {
+        new AlertDialog.Builder(this)
+                .setTitle(book.bookName)
+                .setMessage(R.string.books_coming_soon)
+                .setPositiveButton(android.R.string.ok, null)
+                .show();
     }
 
     private class BookAdapter extends RecyclerView.Adapter<BookAdapter.VH> {
@@ -94,13 +82,9 @@ public class BooksActivity extends AppCompatActivity {
             BookEntity book = books.get(position);
             holder.name.setText(book.bookName);
             holder.author.setText(getString(R.string.by_author, book.author));
-            holder.download.setOnClickListener(v -> {
-                HapticHelper.contextClick(v);
-                startDownload(book);
-            });
             holder.itemView.setOnClickListener(v -> {
                 HapticHelper.contextClick(v);
-                startDownload(book);
+                showComingSoon(book);
             });
         }
 
@@ -112,13 +96,11 @@ public class BooksActivity extends AppCompatActivity {
         class VH extends RecyclerView.ViewHolder {
             final TextView name;
             final TextView author;
-            final TextView download;
 
             VH(@NonNull View itemView) {
                 super(itemView);
                 name = itemView.findViewById(R.id.tvBookName);
                 author = itemView.findViewById(R.id.tvAuthor);
-                download = itemView.findViewById(R.id.btnDownload);
             }
         }
     }

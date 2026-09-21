@@ -69,7 +69,7 @@
         android:gravity="center"
         android:text="@string/default_zikr"
         android:textAlignment="center"
-        android:textSize="34sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/etFeeling" />
@@ -85,6 +85,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvZikrArabic" />
 
+    <LinearLayout
+        android:id="@+id/targetRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvZikrTranslit">
+
+        <TextView
+            style="@style/Clay.Body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/target_count_label"
+            android:textColor="@color/text_primary" />
+
+        <EditText
+            android:id="@+id/etTarget"
+            android:layout_width="88dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_clay_surface"
+            android:gravity="center"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="5"
+            android:padding="10dp"
+            android:text="33"
+            android:textColor="@color/text_primary" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/tvCount"
         style="@style/Clay.Counter"
@@ -94,7 +127,7 @@
         android:text="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvZikrTranslit" />
+        app:layout_constraintTop_toBottomOf="@id/targetRow" />
 
     <FrameLayout
         android:id="@+id/btnTap"

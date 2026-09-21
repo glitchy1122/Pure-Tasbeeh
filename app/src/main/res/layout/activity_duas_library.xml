@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/clay_bg"
+    android:clipToPadding="false"
     android:fillViewport="true">
 
     <LinearLayout
@@ -19,23 +19,21 @@
             android:layout_height="wrap_content"
             android:text="@string/menu_duas" />
 
-        <!-- Single-fiqh mode header -->
         <TextView
             android:id="@+id/headerSingle"
             style="@style/Clay.TileLabel"
             android:layout_width="match_parent"
             android:layout_height="@dimen/header_box_height"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/bg_clay_surface"
             android:gravity="center"
             android:visibility="gone" />
 
-        <!-- Dual-fiqh mode headers -->
         <LinearLayout
             android:id="@+id/headerDualRow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical"
             android:visibility="gone">
 
@@ -53,18 +51,17 @@
                 style="@style/Clay.TileLabel"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/header_box_height"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/bg_clay_button"
                 android:gravity="center"
                 android:text="@string/fiqh_hanfiya" />
         </LinearLayout>
 
-        <!-- Category tiles (shown in single mode, or after picking a sect in dual) -->
         <LinearLayout
             android:id="@+id/categoryContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="12dp"
             android:orientation="vertical"
             android:visibility="gone">
 
@@ -72,7 +69,7 @@
                 android:id="@+id/catNamaz"
                 style="@style/Clay.TileLabel"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
+                android:layout_height="@dimen/category_row_height"
                 android:background="@drawable/bg_clay_button"
                 android:gravity="center"
                 android:text="@string/cat_namaz" />
@@ -81,31 +78,61 @@
                 android:id="@+id/catSpecial"
                 style="@style/Clay.TileLabel"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginTop="12dp"
+                android:layout_height="@dimen/category_row_height"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/bg_clay_button"
                 android:gravity="center"
                 android:text="@string/cat_special" />
 
             <TextView
-                android:id="@+id/catMonths"
+                android:id="@+id/catZiyaraat"
                 style="@style/Clay.TileLabel"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginTop="12dp"
+                android:layout_height="@dimen/category_row_height"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/bg_clay_button"
                 android:gravity="center"
-                android:text="@string/cat_months" />
+                android:text="@string/cat_ziyaraat" />
+
+            <TextView
+                android:id="@+id/catMunajat"
+                style="@style/Clay.TileLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/category_row_height"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_clay_button"
+                android:gravity="center"
+                android:text="@string/cat_munajat" />
+
+            <TextView
+                android:id="@+id/catAamal"
+                style="@style/Clay.TileLabel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/category_row_height"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_clay_button"
+                android:gravity="center"
+                android:text="@string/cat_aamal" />
 
             <TextView
                 android:id="@+id/catDaily"
                 style="@style/Clay.TileLabel"
                 android:layout_width="match_parent"
-                android:layout_height="64dp"
-                android:layout_marginTop="12dp"
+                android:layout_height="@dimen/category_row_height"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/bg_clay_button"
                 android:gravity="center"
                 android:text="@string/cat_daily" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/catSahifa"
+            style="@style/Clay.TileLabel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/category_row_height"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_clay_button"
+            android:gravity="center"
+            android:text="@string/cat_sahifa" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

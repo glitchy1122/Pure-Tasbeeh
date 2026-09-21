@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.adreesulhassan.puretasbeeh.data.entity.SectTag;
+
 /**
  * Offline prefs — Fiqh selection and first-launch flag.
  * Values: JAFRIYA | HANFIYA | BOTH
@@ -54,21 +56,18 @@ public final class FiqhPreferences {
     }
 
     /**
-     * Maps UI Fiqh preference to Room sect_tag filter (SHIA / SUNNI).
+     * Maps UI Fiqh preference to Room sect_tag filter.
      * For BOTH, callers should branch UI instead of using a single tag.
      */
     @NonNull
     public String toSectTag() {
-        String fiqh = getFiqhOrDefault();
-        switch (fiqh) {
+        switch (getFiqhOrDefault()) {
             case FIQH_JAFRIYA:
-                return "SHIA";
+                return SectTag.SHIA;
             case FIQH_HANFIYA:
-                return "SUNNI";
-            case FIQH_BOTH:
-                return "BOTH";
+                return SectTag.SUNNI;
             default:
-                return "BOTH";
+                return SectTag.BOTH;
         }
     }
 
